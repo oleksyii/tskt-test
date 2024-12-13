@@ -10,26 +10,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def find_anagrams_slow(list_of_words: List[str]) -> List[List[str]]:
-    """Takes O(n^2 * k*log(k))"""
-    answers = defaultdict(set)
-    for word_1 in list_of_words:
-        sorted_word_1 = "".join(sorted(word_1))
-        for word_2 in list_of_words[1:]:
-            sorted_word_2 = "".join(sorted(word_2))
-            if sorted_word_1 == sorted_word_2:
-                # print(f"{word_1} is an anagram of {word_2}")
-                answers[sorted_word_1].add(word_2)
-
-        answers[sorted_word_1].add(word_1)
-
-        # Remove the word, that is already processed
-        list_of_words = list_of_words[1:]
-    # Convert the dict of sets 'answers' into a list of lists
-    result = [list(anagrams) for anagrams in answers.values()]
-    return result
-
-
 def find_anagrams(list_of_words: List[str]) -> List[List[str]]:
     """Takes O(k*log(n)) time where k average length of a word(fixed for us) and n is the number of words."""
     anagram_map = defaultdict(list)
