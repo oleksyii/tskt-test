@@ -1,0 +1,2 @@
+matplotlib==3.9.4; python_version >= '3.8'
+numpy==2.2.0; python_version >= '3.9'
