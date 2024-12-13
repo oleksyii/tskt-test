@@ -12,7 +12,7 @@ This project demonstrates how to classify and group words from a given set into 
 ## How to Run the Code
 
 ### Prerequisites
-Ensure you have Python 3.7 or later installed. Additionally, install the required libraries:
+Ensure you have Python 3.9 or later installed. Additionally, install the required libraries:
 
 ```bash
 pip install -r requirements.txt
